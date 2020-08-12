@@ -39,6 +39,7 @@ gem 'devise'
 gem 'materialize-sass', '~> 0.99.0'
 gem 'material_icons'
 gem 'redis'
+gem 'redis-rails'
 gem 'sidekiq'
 
 group :test do

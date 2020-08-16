@@ -22,5 +22,5 @@ RSpec.describe MembersController, type: :controller do
     end
   end
 
-  #TODO: Pedding
+  #TODO: Pending
 end

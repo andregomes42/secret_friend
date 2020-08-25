@@ -2,7 +2,7 @@ require 'sidekiq/web'
 
 Rails.application.routes.draw do
   devise_for :users, :controllers => { registrations: 'registrations' }
-  mount Sidekiq::Web => '/sidekiq'
+  #mount Sidekiq::Web => '/sidekiq'
 
   resources :campaigns, except: [:new] do 
     post 'raffle', on: :member 

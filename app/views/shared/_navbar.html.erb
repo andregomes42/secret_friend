@@ -2,7 +2,8 @@
   <nav class="top-nav">
     <div class="nav-wrapper col s12">
       <a href="/" class="brand-logo">
-        <img src="/assets/logo.png" alt="" class="logo-img">
+        <%= image_tag("logo.png", class: "logo-img") %>
+
         <span class="logo-title">
           Amigo Secreto
         </span>
@@ -12,12 +13,12 @@
 
       <ul class="right hide-on-med-and-down">
         <% if current_user %>
-        <li><a href="/campaigns">Campanhas</a></li>
-        <li><a href="/users/edit">Perfil</a></li>
-        <li> <%= link_to('Sair', destroy_user_session_path, :method => :delete) %></li>
+          <li><a href="/campaigns">Campanhas</a></li>
+          <li><a href="/users/edit">Perfil</a></li>
+          <li> <%= link_to('Sair', destroy_user_session_path, :method => :delete) %></li>
         <% else %>
-        <li><a href="/users/sign_in">Entrar</a></li>
-        <li><a href="/users/sign_up">Criar Conta</a></li>
+          <li><a href="/users/sign_in">Entrar</a></li>
+          <li><a href="/users/sign_up">Criar Conta</a></li>
         <% end %>
       </ul>
     </div>
@@ -27,20 +28,20 @@
 
 <ul class="side-nav" id="side-bar">
   <% if current_user %>
-  <li><a href="/campaigns">Campanhas</a></li>
-  <li><a href="/users/edit">Perfil</a></li>
-  <li>
-    <div class="divider"></div>
-  </li>
-  <li> <%= link_to('Sair', destroy_user_session_path, :method => :delete) %></li>
+    <li><a href="/campaigns">Campanhas</a></li>
+    <li><a href="/users/edit">Perfil</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li> <%= link_to('Sair', destroy_user_session_path, :method => :delete) %></li>
   <% else %>
-  <li><a href="/users/sign_in">Entrar</a></li>
-  <li>
-    <div class="divider"></div>
-  </li>
-  <li><a href="/users/sign_up">Criar Conta</a></li>
-  <li>
-    <div class="divider"></div>
-  </li>
+    <li><a href="/users/sign_in">Entrar</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
+    <li><a href="/users/sign_up">Criar Conta</a></li>
+    <li>
+      <div class="divider"></div>
+    </li>
   <% end %>
 </ul>

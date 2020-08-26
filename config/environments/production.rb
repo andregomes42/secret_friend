@@ -46,7 +46,7 @@ Rails.application.configure do
   # config.action_cable.url = 'wss://example.com/cable'
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 
-  config.aciton_mailer.default_url_options = { :host => request.host_with_port}
+  config.action_mailer.default_url_options = { :host => 'http://localhost:3000' }
   config.aciton_mailer.delivery_method = :smtp
 
   config.action_mailer.raise_delivery_errors = true

@@ -14,5 +14,3 @@ test:
 production:
   <<: *default
   database: secret_friend_production
-  username: secret_friend
-  password: <%= ENV['SECRET_FRIEND_DATABASE_PASSWORD'] %>
